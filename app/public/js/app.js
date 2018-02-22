@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
     //add chosen to the survey
     $(".chosen-select").chosen({})
