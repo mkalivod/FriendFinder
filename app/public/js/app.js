@@ -4,7 +4,9 @@ $(document).ready(function(){
     $(".chosen-select").chosen({})
     
     
-    $('#submit-button').on('click', function(){
+    $('#submit').on('click', function(event){
+        console.log('Hey I got clicked');
+            event.preventDefault();
             // Form validation
             function validateForm() {
               var isValid = true;

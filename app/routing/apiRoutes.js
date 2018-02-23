@@ -35,21 +35,15 @@ module.exports = function(app){
 
 		
 /*==================================================FUNCTIONS==================================================*/
-		/*once all friends have been compared to ther user this function is called to send the
-		best friends data to the HTML/app.js to be displayed in modal.  It also calls the reset function
-		to reset all the comparison variables for the next user submisssion*/
+
 		function finalFriend(){
 			res.send(bestFriend);
 			reset();
 		}
 		
-		
 		/*function to compare the current friend vs the user data then pass that into the bestScore()*/
 		function compareScores(){
-			/*if all the friends have been compared to the user then it calls the finalFriend function.  
-			else it resets the difference number to 0 and compares the user vs current friend score.  The 
-			number is kept positive by using Math.abs().  Then the bestScore function is called passing in
-		 	the difference and current friend number*/
+			
 			if(friendNum == friendsData.length ){
 				finalFriend();
 			}
@@ -93,5 +87,5 @@ module.exports = function(app){
 
 	}); //app.post end
 
-} //modules.export end
+} 
 
